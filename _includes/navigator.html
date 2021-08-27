@@ -1,0 +1,5 @@
+{% if page_type == 'part' %}
+    {% for item in curr_part.items %}
+- [{{item.title}}](/{{curr_part.url}}/{{item.url}})
+    {% endfor %}
+{% endif %}

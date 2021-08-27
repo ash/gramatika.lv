@@ -1,0 +1,62 @@
+title: Грамматика латышского языка
+toc:
+  - title: Имя существительное
+    url: noun
+    items:
+      - title: Род
+        long_title: Род существительных
+        url: gender
+      - title: Число
+        long_title: Единственное и множественное число существительных
+        url: number
+      - title: Падежи
+        long_title: Падежи
+        url: cases
+      - title: Склонения
+        long_title: Склонение существительных
+        url: declination
+      - title: I склонение
+        long_title: I склонение существительных
+        url: declination1
+      - title: II склонение
+        long_title: II склонение существительных
+        url: declination2
+      - title: III склонение
+        long_title: III склонение существительных
+        url: declination3
+      - title: IV склонение
+        long_title: IV склонение существительных
+        url: declination4
+      - title: V склонение
+        long_title: V склонение существительных
+        url: declination5
+      - title: VI склонение
+        long_title: VI склонение существительных
+        url: declination6
+      - title: Чередование согласных
+        long_title: Чередование согласных при склонении слов
+        url: consonant-alternation
+      
+  - title: Имя прилагательное
+    url: adjective
+  - title: Глагол
+    url: verb
+  - title: Местоимение
+    url: pronoun
+  - title: Имя числительное
+    url: numeral
+  - title: Причастие
+    url: participle
+  - title: Деепричастие
+    url: gerunds
+  - title: Наречие
+    url: adverb
+  - title: Предлог
+    url: preposition
+  - title: Союз
+    url: conjunction
+  - title: Наречие
+    url: particle
+  - title: Междометие
+    url: interjection
+

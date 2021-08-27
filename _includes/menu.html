@@ -1,0 +1,48 @@
+{% assign urlparts = page.url | remove_first: "/" | split: "/" %}
+{% assign L1 = urlparts[0] | default '' %}
+{% assign L2 = urlparts[1] | default '' %}
+
+{% assign course_title = site.data.toc.title %}
+{% assign levels = urlparts.size %}
+
+{% comment %}
+URL levels: {{ levels }} 
+
+ L1   L2
+/noun/gender/
+^part ^topic
+{% endcomment %}
+
+{% assign toc = site.data.toc.toc %}
+
+{% assign part_counter = 0 %}
+{% for part in toc %}
+    {% if part.url == L1 %}
+        {% assign curr_part_n = part_counter %}
+
+        {% assign curr_topic_n = 0 %}
+        {% for topic in part.items %}
+            {% if topic.url == L2 %}
+                {% assign page_type = 'topic' %}
+                {% break %}
+            {% endif %}
+            {% assign curr_topic_n = curr_topic_n | plus: 1 %}
+        {% endfor %}
+    {% endif %}
+
+    {% assign part_counter = part_counter | plus: 1 %}
+{% endfor %}
+
+{% assign curr_part = toc[curr_part_n] %}
+{% assign curr_topic = curr_part.items[curr_topic_n] %}
+
+{% capture title %}
+{%- if curr_topic %}{% assign page_type = 'topic' %}{% if curr_topic.long_title %}{{curr_topic.long_title}}{% else %}{{curr_topic.title}}{% endif %}
+{%- elsif curr_part %}{% assign page_type = 'part' %}{{curr_part.title}}
+{%- else %}{% assign page_type = 'top' %}{{course_title}}
+{%- endif %}
+{% endcapture %}
+
+[{{course_title}}](/)
+{%- if curr_topic %} / [{{curr_part.title}}](/{{curr_part.url}}){% endif %}
+# {{title}}

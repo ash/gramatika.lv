@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ page.title }} | A Complete Course of the Raku programming language</title>
+    <meta property="og:title" content="{{ page.title }} | A Complete Course of the Raku programming language" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="A Complete Course of the Raku programming language" />
+
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="/assets/course.css?t=5{% comment %}{ "now" | date: "%s" }}{% endcomment %}">
+    <title>{{ page.title }} | A Complete Course of the Raku programming language</title>
+
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512"  href="/assets/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-16x16.png">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+  
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content  
+            | replace: '%%practiceblock', '<div class="practice">' | replace: '%%/practiceblock', '</div>' 
+            | replace: '%%exercisesblock', '<div class="exercises">' | replace: '%%/exercisesblock', '</div>' 
+            | replace: '%%topicsblock', '<div class="topics">' | replace: '%%/topicsblock', '</div>' 
+            | replace: '%%tipblock', '<div class="tip">' | replace: '%%/tipblock', '</div>' 
+          }}
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
