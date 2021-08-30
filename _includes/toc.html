@@ -1,6 +1,9 @@
 {% for part in site.data.toc.toc %}
-#### [{{part.title}}](/{{part.url}})
-    {% for section in part.items %}
-- [{{section.title}}](/{{part.url}}/{{section.url}})
+#### [{{part.title}}](/{{part.url}}/)
+    {% for topic in part.items %}
+* [{{topic.title}}](/{{part.url}}/{{topic.url}}/)
+        {% for subtopic in topic.items %}
+  - [{{subtopic.title}}](/{{part.url}}/{{topic.url}}/{{subtopic.url}}/)
+        {% endfor %}
     {% endfor %}
 {% endfor %}

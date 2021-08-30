@@ -1,6 +1,7 @@
 title: Грамматика латышского языка
 toc:
   - title: Имя существительное
+    long_title: Имя существительное в латышском языке
     url: noun
     items:
       - title: Род
@@ -15,30 +16,43 @@ toc:
       - title: Склонения
         long_title: Склонение существительных
         url: declination
-      - title: I склонение
-        long_title: I склонение существительных
-        url: declination1
-      - title: II склонение
-        long_title: II склонение существительных
-        url: declination2
-      - title: III склонение
-        long_title: III склонение существительных
-        url: declination3
-      - title: IV склонение
-        long_title: IV склонение существительных
-        url: declination4
-      - title: V склонение
-        long_title: V склонение существительных
-        url: declination5
-      - title: VI склонение
-        long_title: VI склонение существительных
-        url: declination6
+        items:
+          - title: I склонение
+            long_title: I склонение существительных
+            url: i
+          - title: II склонение
+            long_title: II склонение существительных
+            url: ii
+          - title: III склонение
+            long_title: III склонение существительных
+            url: iii
+          - title: IV склонение
+            long_title: IV склонение существительных
+            url: iv
+          - title: V склонение
+            long_title: V склонение существительных
+            url: v
+          - title: VI склонение
+            long_title: VI склонение существительных
+            url: vi
       - title: Чередование согласных
         long_title: Чередование согласных при склонении слов
         url: consonant-alternation
       
   - title: Имя прилагательное
+    long_title: Имя прилагательное в латышском языке
     url: adjective
+    items:
+      - title: Склонение
+        long_title: Склонение прилагательных
+        url: declination
+      - title: Степени сравнения
+        long_title: Степени сравнения прилагательных
+        url: comparative
+      - title: Определённые окончания
+        long_title: Склонение прилагательных с определёнными окончаниями
+        url: definite
+
   - title: Глагол
     url: verb
   - title: Местоимение

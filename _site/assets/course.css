@@ -82,3 +82,7 @@ table tbody tr td em {
     font-style: normal;
     color: #a834f9;
 }
+table tbody tr,
+table tbody tr td {
+    background: white;
+}

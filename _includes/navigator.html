@@ -1,5 +1,14 @@
 {% if page_type == 'part' %}
-    {% for item in curr_part.items %}
-- [{{item.title}}](/{{curr_part.url}}/{{item.url}})
+    {% for topic in curr_part.items %}
+* [{{topic.title}}](/{{curr_part.url}}/{{topic.url}}/)
+        {% for subtopic in topic.items %}
+  - [{{subtopic.title}}](/{{curr_part.url}}/{{topic.url}}/{{subtopic.url}}/)
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% if page_type == 'topic' %}
+    {% for subtopic in curr_topic.items %}
+* [{{subtopic.title}}](/{{curr_part.url}}/{{curr_topic.url}}/{{subtopic.url}}/)
     {% endfor %}
 {% endif %}
